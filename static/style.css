@@ -1,0 +1,42 @@
+@font-face {
+    font-family: 'christmas time';
+    src: url('/static/christmasdays.ttf') format('truetype');
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'christmas time', sans-serif;
+    background-color: #000;
+    overflow: hidden;
+}
+
+.image-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+.image-container img {
+    position: absolute;
+    max-width: 80vw; /* scales for mobile */
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: clamp(2rem, 5vw, 3rem); /* responsive text size */
+    color: green;
+    text-shadow: 2px 2px 6px #000;
+    text-align: center;
+    pointer-events: none;
+    z-index: 2;
+    padding: 0 1rem; /* prevents edge clipping */
+}
